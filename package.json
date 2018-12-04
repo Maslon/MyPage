@@ -1,0 +1,17 @@
+{
+  "name": "mypage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "i18next": "^12.1.0",
+    "parcel-bundler": "^1.10.3",
+    "sass": "^1.15.1"
+  }
+}
