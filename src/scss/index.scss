@@ -1,0 +1,78 @@
+@import "config";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    @include background;
+    background: $color-primary;
+    color: white;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+@supports (display: grid) {
+    body {
+        display: grid;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+        height: 100%;                     
+    }
+}
+
+h1,h2 {
+    font-weight: 500;
+
+    &.name {
+        font-size: 5rem;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 4rem;
+}
+
+.icons {
+    a {
+        padding: 0.6rem;
+
+        &:hover {
+            color: $color-secondary;
+            @include transition()
+        }
+    }
+}
+
+
+// .logo {
+//     width: 100%;
+//     height: 200px;
+//     background-color: red
+// }
+
+// header {
+//     grid-area: header
+// }
+
+// main {
+//     grid-area: main
+// }
+
+// footer {
+//     background: black;
+//     margin-top: 3rem;
+//     grid-area: footer;
+// }
+

@@ -1,2 +1,2 @@
-import "./index.scss"
-import "./localize.js"
+import "./scss/index.scss"
+// import "./localize.js"

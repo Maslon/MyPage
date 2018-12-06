@@ -6,12 +6,15 @@ i18next.init({
     resources: {
         cs:{
             translation: {
-                aboutintro: "Ahoj jmenuji se Radovan"
+                intro: "Ahoj, jmenuji se Radovan",
+                about: `Jsem začínající front-end developer z Kroměříže.
+                        Od doby ukončení studia jsem vystřídal různá zaměstnání, která mě ale nikdy moc nebavila.
+                        Asi před rokem jsem se začal ve svém volném čase zajímat o web development což se mě drží dodnes`
             }
         },
         en:{
             translation: {
-                intro: "Hello my name is Radovan"
+                intro: "Hello, my name is Radovan"
             }
         }
     }
@@ -21,6 +24,7 @@ i18next.init({
 
 function updateContent (){
     document.getElementById("intro").innerHTML = i18next.t("intro")
+    document.getElementById("about").innerHTML = i18next.t("about")
 }
 
 const changeLang = (lang) => {

@@ -5,28 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Radovan Frýželka</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://unpkg.com/i18next/i18next.js"></script>
 </head>
-<body>
+<body id="back-image">
     <header>
         <div class="logo">
         </div>
+        <i class="fas fa-bars fa-2x"></i>
+        <nav class="menu">
+            <div class="menu-brand">
+                <div class="image"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="menu-item">Home</li>
+                <li class="menu-item">About</li>
+                <li class="menu-item">Projects</li>
+            </ul>
+        </nav>
         <button onclick="i18next.changeLanguage('cs')">Czech</button>
         <button onclick="i18next.changeLanguage('en')">English</button>
     </header>
-    <main>
-        <section class="aboutMe">
-            <p id="intro"></p>
-            <p id="about"></p>
-        </section>
-        <section class="projects">
-    
-        </section>    
+    <main id="home">
+        <h1 class="name">Radovan Fryzelka</h1>
+        <h2 class="heading">Web Developer</h2>
     </main>
     <footer class="footer">
-
+        <div class="icons">
+            <a href="https://facebook.com/radovanfr" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>        
+            <a href="https://github.com/Maslon" target="_blank"><i class="fab fa-github fa-2x"></i></a>        
+        </div>
     </footer>
     <script src="./script.js"></script>
 </body>
 </html>
+
+
+<!-- 
+<section class="aboutMe">
+        <p id="intro"></p>
+        <p id="about"></p>
+    </section>
+    <section class="projects">
+        <h1>Tady jsou ukázky některých mých projektů</h1>
+    </section>   -->
