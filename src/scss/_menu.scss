@@ -1,0 +1,37 @@
+.menu-button {
+    float: right;
+    margin: 2rem;
+    cursor: pointer;
+    @include transition;
+
+    .menu-line {
+        width: 28px;
+        height: 4px;
+        background: white;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        @include transition
+    }
+
+    &.hide{
+        transform: rotate(180deg);
+
+        .menu-line{
+            &:nth-child(1){
+                transform: rotate(45deg) translate(6px)
+            }
+            &:nth-child(2){
+                display: none
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg) translate(6px)
+            }
+        }
+    }
+}
+
+
+.show {
+    display: block
+}
+
