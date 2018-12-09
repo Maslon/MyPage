@@ -1,4 +1,4 @@
-import "../scss/index.scss"
+import "../scss/main.scss"
 // import "./localize.js"
 
 const menuBtn = document.querySelector(".menu-button")
@@ -10,6 +10,7 @@ const menuItems = document.querySelectorAll(".menu-item")
 let opened = false;
 
 menuBtn.addEventListener("click", menuToggle)
+menu.addEventListener("click", menuToggle)
 
 function menuToggle(){
     opened = !opened
@@ -19,6 +20,7 @@ function menuToggle(){
         menuBrand.classList.add("show")
         menuNav.classList.add("show")
         menuItems.forEach(item => item.classList.add("show"))
+        
     } else {
         menuBtn.classList.remove("hide")
         menu.classList.remove("show")
