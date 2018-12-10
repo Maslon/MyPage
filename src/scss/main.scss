@@ -11,22 +11,17 @@ html {
 }
 
 body {
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
     @include background;
     background: $color-primary;
-    color: white;
+    color: set-color($color-primary);
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
 
-@supports (display: grid) {
-    body {
-        display: grid;
-        grid-template-areas: "header"
-                             "main"
-                             "footer";
-        height: 100%;                     
-    }
-}
 
 h1,h2 {
     font-weight: 500;
@@ -37,16 +32,19 @@ h1,h2 {
 }
 
 a {
-    color: white;
+    color: set-color($color-primary);
     text-decoration: none;
 }
 
 
 main {
     padding: 4rem;
+    margin-top: 100px;
 }
 
 .icons {
+    padding: 4rem;
+
     a {
         padding: 0.6rem;
 
@@ -65,11 +63,11 @@ main {
 // }
 
 header {
-    grid-area: header
+    grid-area: header;
 }
 
 main {
-    grid-area: main
+    grid-area: main;
 }
 
 footer {

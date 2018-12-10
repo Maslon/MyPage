@@ -1,4 +1,4 @@
-$color-primary: rgb(48, 48, 48);
+$color-primary: rgb(68, 66, 66);
 $color-secondary: lightblue;
 $show-home-image: true;
 $home-image: url(../images/codepic.jpeg);
@@ -28,6 +28,17 @@ $background-opacity: 0.9;
         }
     }
 }
+
+//set color
+
+@function set-color($color) {
+    @if (lightness($color) > 40) {
+        @return black;
+    } @else {
+        @return white;
+    }
+}
+
 
 //media query
 
