@@ -1,0 +1,37 @@
+
+@include mediaXl {
+    
+}
+
+@include mediaLg {
+    
+}
+
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .name {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav,div.menu-brand {
+        float: none;
+        width: 100%;
+    }
+
+    div.menu-brand{
+        height: 20vh;
+    }
+
+    ul.menu-nav{
+        height: 80vh
+    }
+}
+
+@include mediaSm {
+    
+}
