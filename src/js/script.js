@@ -1,5 +1,5 @@
 import "../scss/main.scss"
-// import "./localize.js"
+import "./localize.js"
 
 const menuBtn = document.querySelector(".menu-button")
 const menu = document.querySelector(".menu")
