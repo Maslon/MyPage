@@ -8,26 +8,26 @@ $background-opacity: 0.9;
     transition: all 0.5s ease-out;
 }
 
-@mixin background {
-    @if $show-home-image {
-        &#back-image {
-            background: $home-image;
-            background-size: cover;
-            background-position: 50% 50%;
+// @mixin background {
+//     @if $show-home-image {
+//         &#back-image {
+//             background: $home-image;
+//             background-size: cover;
+//             background-repeat: no-repeat;
 
-            &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba($color-primary, $background-opacity);
-                z-index: -1;
-            }
-        }
-    }
-}
+//             &:after {
+//                 content: "";
+//                 position: absolute;
+//                 top: 0;
+//                 right: 0;
+//                 width: 100%;
+//                 height: 100%;
+//                 background: rgba($color-primary, $background-opacity);
+//                 z-index: -1;
+//             }
+//         }
+//     }
+// }
 
 //set color
 

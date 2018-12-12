@@ -4,7 +4,15 @@
 }
 
 @include mediaLg {
-    
+    main {
+        section {
+            &#projects {
+                .projects-container{
+                    grid-template-columns: repeat(2, 1fr)
+                }
+            }
+        }
+    }
 }
 
 @include mediaMd {
@@ -25,6 +33,18 @@
                 
                 .about-image {
                     margin: 0 auto;
+                }
+            }
+
+            &#projects {
+                .projects-container{
+                    grid-template-columns: 1fr
+                }
+            } 
+            
+            &#contact {
+                .contact-line {
+                    width: 70%;
                 }
             }
         }
