@@ -1,12 +1,20 @@
 
 @include mediaXl {
-    
+    main {
+        section {
+            &#projects {
+                margin-top: 4rem;
+            }
+        }
+    }
 }
 
 @include mediaLg {
     main {
         section {
             &#projects {
+                margin-top: 4rem;
+
                 .projects-container{
                     grid-template-columns: repeat(2, 1fr)
                 }
