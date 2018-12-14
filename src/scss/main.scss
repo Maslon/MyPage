@@ -9,6 +9,7 @@ html {
     height: 100%;
 }
 
+
 body {   
     // @include background;
     background: $color-primary;
@@ -17,6 +18,15 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.lang-button {
+    padding: 0;
+    border: none;
+}
+
+.lang-button-img {
+    width: 50px;
+    padding: 0;
+}
 
 h1,h2 {
     font-weight: 500;
@@ -114,6 +124,7 @@ main {
                     color: black;
                     padding: 2rem;
                     font-weight: 600;
+                    text-align: center;
                     // letter-spacing: 1px;
                 }
 
