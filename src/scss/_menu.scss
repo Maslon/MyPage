@@ -104,6 +104,32 @@
         }
     }
 
+    .lang-buttons{
+        margin: 0.5rem;
+        transform: translate3d(0, 600px, 0);
+        @include transition;
+
+        &.show {
+            transform: translate3d(0, 0, 0)
+        }
+    }
+    
+    .lang-button {
+        padding: 0;
+        border: none;
+        height: 30px;
+        cursor: pointer;
+        outline: none;
+        border-radius: 3px;
+    }
+    
+    .lang-button-img {
+        width: 50px;
+        padding: 0;
+        height: 30px;
+        border-radius: 3px;
+    }
+
     .menu-link {
         font-weight: 400;
         font-size: 2rem;

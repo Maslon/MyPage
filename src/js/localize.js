@@ -18,9 +18,9 @@ i18next.init({
         en:{
             translation: {
                 "about-heading": "Hello, my name is Radovan",
-                "about-text": `I am a begginer fron-end developer from Czech Republic.
+                "about-text": `I am a begginer front-end developer from Czech Republic.
                               Since the time i finished my studies i have had few different jobs, none of which particulary interested me.
-                              About a year ago i tried web-development and then i am constantly improving myself and learning new technologies.`,
+                              About a year ago i tried web-development and since then i am constantly improving myself and learning new technologies.`,
                 "projects-heading": "My Projects",
                 "projects-subheading": "Here are some of my projects"                                    
             }
