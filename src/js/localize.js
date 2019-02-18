@@ -12,7 +12,8 @@ i18next.init({
                         Asi před rokem jsem se začal ve svém volném čase zajímat o web development a od té doby se 
                         neustále zlepšuji a poznávám nové technologie`,
                 "projects-heading": "Mé projekty",
-                "projects-subheading": "Tady jsou některé z mých projektů"        
+                "projects-subheading": "Tady jsou některé z mých projektů",
+                "contact-text": "Kontakt"       
             }
         },
         en:{
@@ -22,7 +23,8 @@ i18next.init({
                               Since the time i finished my studies i have had few different jobs, none of which particulary interested me.
                               About a year ago i tried web-development and since then i am constantly improving myself and learning new technologies.`,
                 "projects-heading": "My Projects",
-                "projects-subheading": "Here are some of my projects"                                    
+                "projects-subheading": "Here are some of my projects",
+                "contact-text": "Contact"                                     
             }
         }
     }
@@ -35,6 +37,7 @@ function updateContent (){
     document.querySelector(".about-text").innerHTML = i18next.t("about-text")
     document.querySelector(".projects-heading").innerHTML = i18next.t("projects-heading")
     document.querySelector(".projects-subheading").innerHTML = i18next.t("projects-subheading")
+    document.querySelector(".contact-text").innerHTML = i18next.t("contact-text")
 }
 
 const changeLang = (lang) => {
