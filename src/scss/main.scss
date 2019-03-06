@@ -126,17 +126,51 @@ main {
 			color: set-color($color-primary-light);
 			background-size: cover;
 			padding: 5rem;
+			display: grid;
+			grid-template-areas: "heading heading heading" "side project project" "side project project";
+			grid-gap: 3rem;
 
-			.projects-heading {
-				font-size: 2rem;
-				font-weight: 800;
+			.headings {
+				grid-area: heading;
+
+				.projects-heading {
+					font-size: 2rem;
+					font-weight: 800;
+				}
+			}
+
+			.side {
+				grid-area: side;
+				background: $color-secondary;
+				border-radius: 5px;
+
+				.side-items {
+					list-style: none;
+					display: flex;
+					flex-direction: column;
+					padding: 0;
+					margin: 0;
+
+					li {
+						padding: 2.5rem 1rem;
+						cursor: pointer;
+					}
+					li:hover {
+						background-color: rgb(3, 3, 107);
+					}
+				}
 			}
 
 			.projects-container {
-				display: grid;
-				grid-gap: 1.5rem;
-				grid-template-columns: repeat(3, 1fr);
-				justify-items: center;
+				grid-area: project;
+
+				.project {
+					display: none;
+				}
+
+				.active {
+					display: block;
+				}
 			}
 
 			.image1 {
