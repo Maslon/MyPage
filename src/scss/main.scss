@@ -2,187 +2,238 @@
 @import "menu";
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-    height: 100%;
+	height: 100%;
 }
 
-
-body {   
-    // @include background;
-    background: $color-primary;
-    color: set-color($color-primary);
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+body {
+	// @include background;
+	background: $color-primary;
+	color: set-color($color-primary);
+	margin: 0;
+	font-family: "Roboto", sans-serif;
 }
 
+.bimg1,
+.bimg2,
+.bimg3 {
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	z-index: -1;
+}
 
-h1,h2 {
-    font-weight: 500;
+.bimg1 {
+	background-image: url("../images/hvezdy.jpeg");
+	min-height: 100vh;
+	background-size: cover;
+}
 
-    &.name {
-        font-size: 4rem;
-    }
+.bimg2 {
+	background-image: url("../images/tatry.jpg");
+	min-height: 400px;
+	background-size: cover;
+}
+
+.bimg3 {
+	background-image: url("../images/mountain.jpeg");
+	min-height: 400px;
+	background-size: cover;
+}
+
+h1,
+h2 {
+	font-weight: 500;
+
+	&.name {
+		font-size: 5rem;
+	}
 }
 
 a {
-    color: set-color($color-primary);
-    text-decoration: none;
+	color: set-color($color-primary);
+	text-decoration: none;
 }
 
+.head-content {
+	position: absolute;
+	top: 20%;
+	width: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5rem;
+
+	.name {
+		grid-area: name;
+		margin: 0;
+		padding: 0;
+	}
+
+	.about-image {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		grid-area: image;
+	}
+
+	.tools {
+		text-align: center;
+		font-size: 1.2rem;
+	}
+
+	.about {
+		grid-area: about;
+
+		&-text {
+			max-width: 700px;
+		}
+	}
+
+	i {
+		margin-right: 0.4rem;
+	}
+}
 
 main {
-    max-width: 1150px;
-    margin: 0 auto;
+	// max-width: 1150px;
+	// margin: 0 auto;
 
-    section {
-        &#home {
-            display: grid;
-            grid-template-areas: "name name"
-                                 "image icons"
-                                 "about about";
-            grid-row-gap: 5rem;
-            padding: 5rem;
+	section {
+		&#home {
+			display: grid;
+			grid-template-areas: "name name" "image icons" "about about";
+			grid-row-gap: 5rem;
+			padding: 5rem;
 
-            .name {
-                grid-area: name;
-                margin: 0;
-                padding: 0;
-            }
+			.name {
+				grid-area: name;
+				margin: 0;
+				padding: 0;
+			}
 
-            .about-image {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                grid-area: image;
-            }
+			.about-image {
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				grid-area: image;
+			}
 
-            .tools {
-                grid-area: icons;
-            }
+			.tools {
+				grid-area: icons;
+			}
 
+			.about {
+				grid-area: about;
 
-            .about{
-                grid-area: about;
+				&-text {
+					max-width: 700px;
+				}
+			}
 
-                &-text{
-                    max-width: 700px;
-                }
-            }
+			i {
+				margin-right: 0.4rem;
+			}
+		}
 
-            i {
-                margin-right: 0.4rem;
-            }
+		&#projects {
+			background: $color-primary;
+			background-size: cover;
+			padding: 5rem;
+			.projects-container {
+				display: grid;
+				grid-gap: 1.5rem;
+				grid-template-columns: repeat(3, 1fr);
+				justify-items: center;
+			}
 
-        }
+			.image1 {
+				background: url("../images/recipe\ app\ image.JPG");
+			}
+			.image2 {
+				background: url("../images/fitapp\ image.JPG");
+			}
+			.image3 {
+				background: url("../images/placesapp\ image.JPG");
+			}
 
-        &#projects {
-            background: $color-primary;
-            background-size: cover;
-            padding: 5rem;
-            .projects-container {
-                display: grid;
-                grid-gap: 1.5rem;
-                grid-template-columns: repeat(3, 1fr);
-                justify-items: center;
-            }
+			.project-description {
+				width: 300px;
+				height: 300px;
+				background-size: cover;
+				color: transparent;
 
-            .image1{
-                background: url("../images/recipe\ app\ image.JPG");
-            }  
-            .image2{
-                background: url("../images/fitapp\ image.JPG");
-            }
-            .image3{
-                background: url("../images/placesapp\ image.JPG");
-            }
+				&:hover > .overlay {
+					visibility: visible;
+				}
 
-            .project-description {
-                width: 300px;
-                height: 300px;
-                background-size: cover;
-                color:transparent;
+				.overlay {
+					background: rgba($color-primary, 0.7);
+					visibility: hidden;
+					height: 300px;
+					width: 300px;
+					color: black;
+					padding: 2rem;
+					font-weight: 600;
+					text-align: center;
+					// letter-spacing: 1px;
+				}
+			}
 
-              
+			.project-github {
+				float: right;
 
-                &:hover > .overlay{
-                    visibility: visible;
-                }
+				&:hover {
+					color: $color-secondary;
+				}
+			}
+		}
 
-                .overlay {
-                    background: rgba($color-primary, 0.7);
-                    visibility: hidden;
-                    height: 300px;
-                    width: 300px;
-                    color: black;
-                    padding: 2rem;
-                    font-weight: 600;
-                    text-align: center;
-                    // letter-spacing: 1px;
-                }
+		&#contact {
+			text-align: center;
 
-            }
+			.contact-line {
+				width: 40%;
+				margin-top: 3.5rem;
+				margin-bottom: 3.5rem;
+			}
 
-              
+			.contact-email {
+				display: inline-block;
+				font-size: 1.5rem;
+				margin: 0.5rem;
 
-
-            .project-github {
-                float: right;
-
-                &:hover{
-                    color: $color-secondary;
-                }
-            }
-        }
-
-        &#contact {
-            text-align: center;
-
-            .contact-line{
-                width: 40%;
-                margin-top: 3.5rem;
-                margin-bottom: 3.5rem;
-            }
-
-            .contact-email {
-                display: inline-block;
-                font-size: 1.5rem;
-                margin: 0.5rem;
-
-                &:hover {
-                    color: $color-secondary;
-                    letter-spacing: 0.05rem;
-                    @include transition;
-                }
-            }
-        }
-
-    }
+				&:hover {
+					color: $color-secondary;
+					letter-spacing: 0.05rem;
+					@include transition;
+				}
+			}
+		}
+	}
 }
 
-
 .icons {
-    padding: 2rem;
-    text-align: center;
+	padding: 2rem;
+	text-align: center;
 
-    a {
-        padding: 0.6rem;
+	a {
+		padding: 0.6rem;
 
-        &:hover {
-            color: $color-secondary;
-            @include transition()
-        }
-    }
+		&:hover {
+			color: $color-secondary;
+			@include transition();
+		}
+	}
 }
 
 .copyright {
-    padding: 2rem;
+	padding: 2rem;
 }
 
-
-
 @import "mobile";
-
-
