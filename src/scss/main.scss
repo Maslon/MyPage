@@ -11,8 +11,8 @@ html {
 
 body {
 	// @include background;
-	background: $color-primary;
-	color: set-color($color-primary);
+	background: $color-primary-dark;
+	color: set-color($color-primary-dark);
 	margin: 0;
 	font-family: "Roboto", sans-serif;
 }
@@ -51,11 +51,15 @@ h2 {
 
 	&.name {
 		font-size: 5rem;
+
+		span {
+			color: $color-secondary;
+		}
 	}
 }
 
 a {
-	color: set-color($color-primary);
+	color: set-color($color-primary-dark);
 	text-decoration: none;
 }
 
@@ -75,28 +79,29 @@ a {
 		padding: 0;
 	}
 
-	.about-image {
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		grid-area: image;
-	}
-
 	.tools {
 		text-align: center;
 		font-size: 1.2rem;
 	}
 
-	.about {
-		grid-area: about;
+	i {
+		margin-right: 0.4rem;
+		animation: colorPulse 3s infinite;
+	}
 
-		&-text {
-			max-width: 700px;
+	@keyframes colorPulse {
+		from {
+			color: $color-secondary;
+		}
+		to {
+			color: set-color($color-primary-dark);
 		}
 	}
 
-	i {
-		margin-right: 0.4rem;
+	@for $x from 1 through 6 {
+		i:nth-child(#{$x}) {
+			animation-delay: $x * 0.5s;
+		}
 	}
 }
 
@@ -105,46 +110,28 @@ main {
 	// margin: 0 auto;
 
 	section {
-		&#home {
-			display: grid;
-			grid-template-areas: "name name" "image icons" "about about";
-			grid-row-gap: 5rem;
-			padding: 5rem;
+		&#about {
+			max-width: 700px;
+			margin: 2rem auto;
+			letter-spacing: 1px;
+			line-height: 1.5rem;
 
-			.name {
-				grid-area: name;
-				margin: 0;
-				padding: 0;
-			}
-
-			.about-image {
-				width: 200px;
-				height: 200px;
-				border-radius: 50%;
-				grid-area: image;
-			}
-
-			.tools {
-				grid-area: icons;
-			}
-
-			.about {
-				grid-area: about;
-
-				&-text {
-					max-width: 700px;
-				}
-			}
-
-			i {
-				margin-right: 0.4rem;
+			.about-heading {
+				font-size: 3rem;
 			}
 		}
 
 		&#projects {
-			background: $color-primary;
+			background: $color-primary-light;
+			color: set-color($color-primary-light);
 			background-size: cover;
 			padding: 5rem;
+
+			.projects-heading {
+				font-size: 2rem;
+				font-weight: 800;
+			}
+
 			.projects-container {
 				display: grid;
 				grid-gap: 1.5rem;
@@ -173,7 +160,7 @@ main {
 				}
 
 				.overlay {
-					background: rgba($color-primary, 0.7);
+					background: rgba($color-primary-dark, 0.7);
 					visibility: hidden;
 					height: 300px;
 					width: 300px;
@@ -187,9 +174,10 @@ main {
 
 			.project-github {
 				float: right;
+				color: set-color($color-primary-light);
 
-				&:hover {
-					color: $color-secondary;
+				:hover {
+					color: rgb(2, 2, 71);
 				}
 			}
 		}

@@ -1,150 +1,144 @@
 .menu-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    @include transition;
-    z-index: 1;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	@include transition;
+	z-index: 1;
 
-    .menu-line {
-        width: 28px;
-        height: 4px;
-        background: set-color($color-primary);
-        margin-bottom: 5px;
-        border-radius: 5px;
-        @include transition
-    }
+	.menu-line {
+		width: 28px;
+		height: 4px;
+		background: set-color($color-primary-dark);
+		margin-bottom: 5px;
+		border-radius: 5px;
+		@include transition;
+	}
 
-    &.hide{
-        transform: rotate(180deg);
+	&.hide {
+		transform: rotate(180deg);
 
-        .menu-line{
-            &:nth-child(1){
-                transform: rotate(45deg) translate(6px)
-            }
-            &:nth-child(2){
-                display: none
-            }
-            &:nth-child(3){
-                transform: rotate(-45deg) translate(6px)
-            }
-        }
-    }
+		.menu-line {
+			&:nth-child(1) {
+				transform: rotate(45deg) translate(6px);
+			}
+			&:nth-child(2) {
+				display: none;
+			}
+			&:nth-child(3) {
+				transform: rotate(-45deg) translate(6px);
+			}
+		}
+	}
 }
 
-
-
 .menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0.9;
-    visibility: hidden;
-    
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0.9;
+	visibility: hidden;
 
-    &.show {
-        visibility: visible;
-    }
+	&.show {
+		visibility: visible;
+	}
 
-    &-brand, &-nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        float: left;
-        width: 50%;
-        overflow: hidden;
-        padding: 0;
-        margin: 0;
-     
-    }
+	&-brand,
+	&-nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		float: left;
+		width: 50%;
+		overflow: hidden;
+		padding: 0;
+		margin: 0;
+	}
 
-    &-nav {
-        background: darken($color-primary, 5);
-        list-style: none;
-        transform: translate3d(100%, 0, 0);
-        @include transition;
+	&-nav {
+		background: darken($color-primary-dark, 5);
+		list-style: none;
+		transform: translate3d(100%, 0, 0);
+		@include transition;
 
-        &.show {
-            transform: translate3d(0, 0, 0)
-        }
-    }
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
+	}
 
-    &-brand {
-        background: $color-primary;
-        transform: translate3d(-100%, 0, 0);
-        @include transition;
+	&-brand {
+		background: $color-primary-dark;
+		transform: translate3d(-100%, 0, 0);
+		@include transition;
 
-        &.show {
-            transform: translate3d(0, 0, 0)
-        }
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
 
-        .image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: url("../images/codepic.jpeg");
-            border: 3px solid $color-secondary;
-        }
-    }
+		.image {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background: url("../images/codepic.jpeg");
+			border: 3px solid $color-secondary;
+		}
+	}
 
-    .menu-item {
-        transform: translate3d(0, -600px, 0);
-        @include transition;
-        margin: 2rem;
-        color: set-color($color-primary);
+	.menu-item {
+		transform: translate3d(0, -600px, 0);
+		@include transition;
+		margin: 2rem;
+		color: set-color($color-primary-dark);
 
-        &.show {
-            transform: translate3d(0, 0, 0)
-        }
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
 
-        &.active > a {
-            color: $color-secondary
-        }
-    }
+		&.active > a {
+			color: $color-secondary;
+		}
+	}
 
-    .lang-buttons{
-        margin: 0.5rem;
-        transform: translate3d(0, 600px, 0);
-        @include transition;
+	.lang-buttons {
+		margin: 0.5rem;
+		transform: translate3d(0, 600px, 0);
+		@include transition;
 
-        &.show {
-            transform: translate3d(0, 0, 0)
-        }
-    }
-    
-    .lang-button {
-        padding: 0;
-        border: none;
-        height: 30px;
-        cursor: pointer;
-        outline: none;
-        border-radius: 3px;
-    }
-    
-    .lang-button-img {
-        width: 50px;
-        padding: 0;
-        height: 30px;
-        border-radius: 3px;
-    }
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
+	}
 
-    .menu-link {
-        font-weight: 400;
-        font-size: 2rem;
+	.lang-button {
+		padding: 0;
+		border: none;
+		height: 30px;
+		cursor: pointer;
+		outline: none;
+		border-radius: 3px;
+	}
 
-        &:hover {
-            color: $color-secondary;
-        }
-    }
+	.lang-button-img {
+		width: 50px;
+		padding: 0;
+		height: 30px;
+		border-radius: 3px;
+	}
+
+	.menu-link {
+		font-weight: 400;
+		font-size: 2rem;
+
+		&:hover {
+			color: $color-secondary;
+		}
+	}
 }
 
 @for $x from 1 through 3 {
-    .menu-item:nth-child(#{$x}) {
-        transition-delay: $x * 0.1s;
-    }
+	.menu-item:nth-child(#{$x}) {
+		transition-delay: $x * 0.1s;
+	}
 }
-
-
-

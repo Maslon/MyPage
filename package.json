@@ -11,6 +11,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"i18next": "^12.1.0",
+		"parcel": "^1.11.0",
 		"parcel-bundler": "^1.10.3",
 		"sass": "^1.15.1"
 	}

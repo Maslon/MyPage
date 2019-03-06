@@ -7,6 +7,7 @@ const menuBrand = document.querySelector('.menu-brand');
 const menuNav = document.querySelector('.menu-nav');
 const menuItems = document.querySelectorAll('.menu-item');
 const langButtons = document.querySelector('.lang-buttons');
+const gitIcons = document.querySelectorAll('.fa-github');
 
 let opened = false;
 
@@ -32,3 +33,14 @@ function menuToggle() {
 	}
 	console.log(opened);
 }
+
+gitIcons.forEach(icon => {
+	icon.addEventListener('mouseenter', () => {
+		icon.classList.remove('fa-github');
+		icon.classList.add('fa-github-square');
+	});
+	icon.addEventListener('mouseleave', () => {
+		icon.classList.remove('fa-github-square');
+		icon.classList.add('fa-github');
+	});
+});
